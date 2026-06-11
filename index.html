@@ -19,9 +19,15 @@
 <body>
 
   <header class="topo">
-    <a href="index.html" class="logo-pequena" title="Voltar para o início">
-      <img src="logo.png" alt="Casalli Technology" class="logo-img-pequena">
-    </a>
+    <div class="topo-esquerda">
+      <a href="index.html" class="logo-pequena" title="Voltar para o início">
+        <img src="logo.png" alt="Casalli Technology" class="logo-img-pequena">
+      </a>
+
+      <button class="botao-pagamento-topo" onclick="abrirCategoria('pagamento')">
+        💰 Formas de Pagamento
+      </button>
+    </div>
 
     <div class="contatos-topo">
       <a 
@@ -30,7 +36,8 @@
         class="whatsapp"
         title="Chamar no WhatsApp"
       >
-        📱 (16) 99450-7580
+        <span class="icone-contato">📱</span>
+<span>(16) 99450-7580</span>
       </a>
 
       <a 
@@ -39,8 +46,10 @@
         class="instagram-link"
         title="Abrir Instagram"
       >
-        <img src="instagram.png" alt="Instagram" class="instagram-img">
-        Instagram
+        <span class="icone-contato">
+  <img src="instagram.png" alt="Instagram" class="instagram-img">
+</span>
+<span>Instagram</span>
       </a>
     </div>
   </header>
