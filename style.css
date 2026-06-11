@@ -268,13 +268,7 @@ body {
   color: var(--texto-suave);
   font-size: 18px;
   line-height: 1.55;
-  margin-bottom: 52px;
-}
-
-.preco {
-  color: var(--azul);
-  font-size: 29px;
-  font-weight: 400;
+  margin-bottom: 0;
 }
 
 .botao-voltar {
@@ -289,6 +283,34 @@ body {
 .botao-voltar:hover {
   color: #ffffff;
 }
+
+/* BOTÃO SOLICITAR SERVIÇO */
+
+.area-botao-servico {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.botao-solicitar {
+  background-color: rgba(74, 168, 255, 0.18);
+  color: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.botao-solicitar:hover {
+  background-color: rgba(74, 168, 255, 0.38);
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(74, 168, 255, 0.45);
+}
+
+/* PAGAMENTO */
 
 .pagamento-card {
   min-height: 110px;
@@ -327,21 +349,21 @@ body {
   }
 
   .whatsapp,
-.instagram-link {
-  font-size: 13px;
-  min-width: 135px;
-}
+  .instagram-link {
+    font-size: 13px;
+    min-width: 135px;
+  }
 
   .icone-contato {
-  width: 22px;
-  height: 22px;
-  font-size: 16px;
-}
+    width: 22px;
+    height: 22px;
+    font-size: 16px;
+  }
 
-.instagram-img {
-  width: 21px;
-  height: 21px;
-}
+  .instagram-img {
+    width: 21px;
+    height: 21px;
+  }
 
   .home {
     padding-top: 20px;
@@ -404,14 +426,22 @@ body {
 
   .card-servico p {
     font-size: 13px;
-    margin-bottom: 28px;
-  }
-
-  .preco {
-    font-size: 22px;
+    margin-bottom: 0;
   }
 
   .pagina-servicos {
     padding: 25px 26px 60px;
+  }
+
+  .area-botao-servico {
+    justify-content: center;
+    margin-top: 22px;
+  }
+
+  .botao-solicitar {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 11px 14px;
   }
 }
