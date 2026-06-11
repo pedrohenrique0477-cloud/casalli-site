@@ -107,14 +107,16 @@ function abrirCategoria(categoria) {
 function renderizarHome() {
   app.innerHTML = `
     <section class="home">
-      <div class="logo-central">
-  <img src="logo.png" alt="Casalli Technology" class="logo-img-central">
+      <p class="chamada chamada-topo">Veja os Serviços Disponíveis!</p>
 
-  <div class="logo-textos">
-    <h1>CASALLI</h1>
-    <p>TECHNOLOGY</p>
-  </div>
-</div>
+      <div class="logo-central">
+        <img src="logo.png" alt="Casalli Technology" class="logo-img-central">
+
+        <div class="logo-textos">
+          <h1>CASALLI</h1>
+          <p>TECHNOLOGY</p>
+        </div>
+      </div>
 
       <div class="lista-topicos">
         <button class="topico" onclick="abrirCategoria('video-game')">
@@ -137,13 +139,39 @@ function renderizarHome() {
           Impressora
         </button>
       </div>
+    </section>
+  `;
+}
 
-      <p class="chamada">Veja os Serviços Disponíveis!</p>
+function renderizarPagamento() {
+  app.innerHTML = `
+    <section class="pagina-servicos">
+      <div class="titulo-categoria">
+        <span class="icone">💰</span>
+        <h2>Formas de Pagamento</h2>
+      </div>
+
+      <div class="servicos">
+        <article class="card-servico pagamento-card">
+          <h3>💵 Dinheiro / 📱 Pix</h3>
+          <p>Pagamento em espécie no ato do serviço ou transferência instantânea via chave Pix.</p>
+        </article>
+
+        <article class="card-servico pagamento-card">
+          <h3>💳 Cartão de Débito / Crédito (Aproximação)</h3>
+          <p>Aceitamos as principais bandeiras no débito e crédito.</p>
+        </article>
+      </div>
     </section>
   `;
 }
 
 function renderizarCategoria(nomeCategoria) {
+  if (nomeCategoria === "pagamento") {
+    renderizarPagamento();
+    return;
+  }
+
   const categoria = categorias[nomeCategoria];
 
   if (!categoria) {
