@@ -34,6 +34,12 @@ body {
   background-color: #061423;
 }
 
+.topo-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 .logo-pequena {
   text-decoration: none;
   display: flex;
@@ -53,11 +59,30 @@ body {
   filter: drop-shadow(0 0 8px rgba(74, 168, 255, 0.5));
 }
 
+.botao-pagamento-topo {
+  background-color: rgba(34, 76, 116, 0.75);
+  color: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  padding: 9px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.botao-pagamento-topo:hover {
+  background-color: rgba(50, 103, 151, 0.95);
+  transform: translateY(-3px);
+  box-shadow: 0 0 16px rgba(74, 168, 255, 0.35);
+}
+
 .contatos-topo {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 28px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
 }
 
 .whatsapp,
@@ -70,6 +95,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 230px;
 }
 
 .whatsapp:hover,
@@ -78,9 +104,19 @@ body {
   text-shadow: 0 0 10px rgba(74, 168, 255, 0.9);
 }
 
+.icone-contato {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
 .instagram-img {
-  width: 38px;
-  height: 38px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
   display: block;
   transition: 0.3s ease;
@@ -97,8 +133,17 @@ body {
   min-height: calc(100vh - 160px);
   max-width: 760px;
   margin: 0 auto;
-  padding: 170px 30px 60px;
+  padding: 35px 30px 60px;
   text-align: center;
+}
+
+.chamada {
+  color: var(--azul);
+  font-size: 28px;
+}
+
+.chamada-topo {
+  margin-top: 0;
 }
 
 .logo-central {
@@ -106,13 +151,16 @@ body {
   justify-content: center;
   align-items: center;
   gap: 28px;
-  margin-bottom: 150px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
-.logo-central-icon {
-  color: #d1d1d1;
-  font-size: 105px;
-  transform: rotate(-25deg);
+.logo-img-central {
+  width: 180px;
+  max-width: 90%;
+  height: auto;
+  display: block;
+  mix-blend-mode: screen;
 }
 
 .logo-textos h1 {
@@ -164,13 +212,7 @@ body {
   color: white;
 }
 
-.chamada {
-  margin-top: 55px;
-  color: var(--azul);
-  font-size: 28px;
-}
-
-/* PÁGINA DE SERVIÇOS */
+/* PÁGINAS INTERNAS */
 
 .pagina-servicos {
   max-width: 960px;
@@ -248,92 +290,128 @@ body {
   color: #ffffff;
 }
 
+.pagamento-card {
+  min-height: 110px;
+}
+
+.pagamento-card p {
+  margin-bottom: 0;
+}
+
 /* CELULAR */
 
 @media (max-width: 768px) {
   .topo {
     height: 120px;
-    padding: 34px 28px;
+    padding: 18px 16px;
+    align-items: flex-start;
   }
 
-  .logo-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 48px;
+  .topo-esquerda {
+    gap: 12px;
   }
 
-  ;.contatos-topo {
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
-}
+  .logo-img-pequena {
+    width: 48px;
+  }
 
-.whatsapp,
+  .botao-pagamento-topo {
+    font-size: 11px;
+    padding: 7px 12px;
+  }
+
+  .contatos-topo {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .whatsapp,
 .instagram-link {
   font-size: 13px;
+  min-width: 135px;
+}
+
+  .icone-contato {
+  width: 22px;
+  height: 22px;
+  font-size: 16px;
 }
 
 .instagram-img {
-  width: 24px;
-  height: 24px;
+  width: 21px;
+  height: 21px;
 }
 
-
   .home {
-    padding-top: 90px;
+    padding-top: 20px;
+  }
+
+  .chamada {
+    font-size: 18px;
   }
 
   .logo-central {
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 90px;
+    flex-direction: row;
+    gap: 18px;
+    margin-top: 80px;
+    margin-bottom: 70px;
   }
 
-  .logo-central-icon {
-    font-size: 80px;
+  .logo-img-central {
+    width: 80px;
   }
 
   .logo-textos h1 {
-    font-size: 36px;
+    font-size: 30px;
     letter-spacing: 10px;
   }
 
   .logo-textos p {
-    font-size: 14px;
-    letter-spacing: 13px;
+    font-size: 13px;
+    letter-spacing: 12px;
   }
 
   .topico {
-    font-size: 30px;
-    min-height: 86px;
+    font-size: 23px;
+    min-height: 57px;
   }
 
-  .chamada {
-    font-size: 22px;
+  .topico span {
+    font-size: 24px;
+  }
+
+  .lista-topicos {
+    gap: 22px;
   }
 
   .titulo-categoria h2 {
-    font-size: 36px;
+    font-size: 26px;
+  }
+
+  .titulo-categoria .icone {
+    font-size: 28px;
+  }
+
+  .card-servico {
+    min-height: 130px;
+    padding: 18px 20px 22px;
   }
 
   .card-servico h3 {
-    font-size: 23px;
+    font-size: 18px;
   }
 
   .card-servico p {
-    font-size: 16px;
-    margin-bottom: 35px;
+    font-size: 13px;
+    margin-bottom: 28px;
   }
 
   .preco {
-    font-size: 25px;
+    font-size: 22px;
   }
-}
 
-.logo-img-central {
-  width: 180px;
-  max-width: 90%;
-  height: auto;
-  display: block;
-  mix-blend-mode: screen;
+  .pagina-servicos {
+    padding: 25px 26px 60px;
+  }
 }
