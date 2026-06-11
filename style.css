@@ -293,6 +293,9 @@ body {
 }
 
 .botao-solicitar {
+  position: relative;
+  overflow: hidden;
+
   background-color: rgba(74, 168, 255, 0.18);
   color: #ffffff;
   border: 1px solid var(--borda);
@@ -302,12 +305,62 @@ body {
   text-decoration: none;
   transition: 0.3s ease;
   white-space: nowrap;
+
+  box-shadow: 0 0 10px rgba(74, 168, 255, 0.20);
+  animation: brilhoLeve 2.8s infinite ease-in-out;
+}
+
+.botao-solicitar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+  animation: luzPassando 3.5s infinite;
 }
 
 .botao-solicitar:hover {
   background-color: rgba(74, 168, 255, 0.38);
   transform: translateY(-3px);
-  box-shadow: 0 0 18px rgba(74, 168, 255, 0.45);
+  box-shadow: 0 0 22px rgba(74, 168, 255, 0.60);
+}
+
+@keyframes brilhoLeve {
+  0% {
+    box-shadow: 0 0 8px rgba(74, 168, 255, 0.18);
+  }
+
+  50% {
+    box-shadow: 0 0 18px rgba(74, 168, 255, 0.45);
+  }
+
+  100% {
+    box-shadow: 0 0 8px rgba(74, 168, 255, 0.18);
+  }
+}
+
+@keyframes luzPassando {
+  0% {
+    left: -120%;
+  }
+
+  45% {
+    left: 130%;
+  }
+
+  100% {
+    left: 130%;
+  }
 }
 
 /* PAGAMENTO */
