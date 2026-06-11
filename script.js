@@ -1,5 +1,7 @@
 const app = document.getElementById("app");
 
+const numeroWhatsApp = "5516994507580";
+
 const categorias = {
   "video-game": {
     titulo: "Video Game",
@@ -7,23 +9,19 @@ const categorias = {
     servicos: [
       {
         nome: "Limpeza Interna e Externa - PS4",
-        descricao: "Desmontagem do console, limpeza do cooler, dissipador, remoção de poeira e troca da pasta térmica.",
-        preco: "R$ 100"
+        descricao: "Serviço completo com desmontagem cuidadosa do console, remoção de poeira interna, limpeza do cooler, dissipador e saídas de ventilação. Também inclui troca da pasta térmica para auxiliar no controle de temperatura e melhorar o desempenho térmico do aparelho."
       },
       {
         nome: "Limpeza Interna e Externa - PS5",
-        descricao: "Desmontagem do console, limpeza do cooler, dissipador e remoção de poeira.",
-        preco: "R$ 120"
+        descricao: "Limpeza preventiva do console com desmontagem técnica, remoção de poeira acumulada, higienização das áreas de ventilação, cooler e dissipador. Indicado para melhorar a refrigeração, reduzir ruídos e ajudar na conservação do equipamento."
       },
       {
         nome: "Limpeza Interna e Externa - XBOX (todos os modelos)",
-        descricao: "Desmontagem do console, limpeza do cooler, dissipador, remoção de poeira e troca da pasta térmica.",
-        preco: "R$ 120"
+        descricao: "Serviço de limpeza interna e externa para consoles Xbox, com desmontagem do equipamento, remoção de poeira, limpeza do sistema de ventilação, cooler e dissipador. Quando necessário, também pode ser realizada a troca da pasta térmica para melhor controle de temperatura."
       },
       {
         nome: "Conserto de Drift (Controle)",
-        descricao: "Desmonta total ou parcial do controle, limpeza externa na carcaça e limpeza interna nos analógicos.",
-        preco: "R$ 25"
+        descricao: "Avaliação e manutenção do controle com foco em falhas de movimentação automática nos analógicos. O serviço pode incluir desmontagem parcial ou total, limpeza interna, limpeza dos analógicos, remoção de sujeira acumulada e testes de funcionamento após o procedimento."
       }
     ]
   },
@@ -34,13 +32,11 @@ const categorias = {
     servicos: [
       {
         nome: "Limpeza Interna (Completa)",
-        descricao: "Abertura do gabinete, remoção de poeira, limpeza dos coolers, organização dos cabos e troca da pasta térmica do processador.",
-        preco: "R$ 120"
+        descricao: "Limpeza completa do gabinete com abertura do computador, remoção de poeira, limpeza dos coolers, placas, entradas de ar e componentes internos. Também pode incluir organização básica dos cabos e troca da pasta térmica do processador para melhorar a refrigeração."
       },
       {
         nome: "Formatação e Instalação do Sistema",
-        descricao: "Formatação e instalação do Windows com drivers atualizados e otimização.",
-        preco: "R$ 80"
+        descricao: "Formatação do computador com instalação do sistema operacional, drivers essenciais, atualizações básicas e ajustes de desempenho. Serviço indicado para computadores lentos, com erros, travamentos ou necessidade de reinstalação limpa do Windows."
       }
     ]
   },
@@ -51,13 +47,11 @@ const categorias = {
     servicos: [
       {
         nome: "Limpeza Interna (Completa)",
-        descricao: "Desmontagem do notebook para remoção de poeira acumulada, limpeza do sistema de ventilação, cooler e troca da pasta térmica.",
-        preco: "R$ 120"
+        descricao: "Desmontagem cuidadosa do notebook para remoção de poeira acumulada, limpeza do cooler, dissipador, entradas e saídas de ar. Também pode incluir troca da pasta térmica, ajudando a reduzir aquecimento, ruídos e travamentos causados por superaquecimento."
       },
       {
         nome: "Formatação Completa",
-        descricao: "Formatação, instalação do Windows, drivers e otimização.",
-        preco: "R$ 80"
+        descricao: "Formatação do notebook com instalação do sistema operacional, drivers, atualizações básicas e configurações iniciais. Serviço indicado para melhorar desempenho, corrigir erros, remover arquivos desnecessários e deixar o equipamento pronto para uso."
       }
     ]
   },
@@ -68,28 +62,23 @@ const categorias = {
     servicos: [
       {
         nome: "Limpeza de Cabeçote (Software)",
-        descricao: "Procedimento de limpeza pelo sistema da impressora para desobstrução dos bicos.",
-        preco: "R$ 20"
+        descricao: "Procedimento de limpeza realizado pelo sistema da impressora para auxiliar na desobstrução dos bicos de impressão. Indicado para casos de falhas na impressão, linhas em branco, cores fracas ou impressão irregular."
       },
       {
         nome: "Instalação e Configuração",
-        descricao: "Instalação da impressora em computador ou celular, configuração de Wi-Fi e testes.",
-        preco: "R$ 45"
+        descricao: "Instalação da impressora em computador, notebook ou celular, configuração inicial, conexão com a rede quando aplicável e realização de testes de impressão. Serviço indicado para impressoras novas ou reinstalação em novos dispositivos."
       },
       {
         nome: "Configuração de Rede Wi-Fi",
-        descricao: "Conexão da impressora à rede sem fio e dispositivos.",
-        preco: "R$ 25"
+        descricao: "Configuração da impressora na rede sem fio para permitir impressão por computadores, notebooks e celulares compatíveis. Inclui verificação da conexão, ajustes básicos e testes para confirmar o funcionamento."
       },
       {
         nome: "Troca de Cartuchos ou Refil de Tinta",
-        descricao: "Instalação e testes após substituição.",
-        preco: "R$ 25"
+        descricao: "Substituição de cartuchos ou orientação no procedimento de refil de tinta, seguida de testes de impressão. Serviço indicado para garantir que a impressora reconheça corretamente os suprimentos e volte a imprimir de forma adequada."
       },
       {
         nome: "Reset de Almofada (Ink Pad)",
-        descricao: "Procedimento de reset para impressoras compatíveis.",
-        preco: "R$ 60"
+        descricao: "Procedimento de reset do contador de almofada de tinta em modelos compatíveis. Indicado quando a impressora apresenta aviso relacionado à almofada ou ao limite de absorção, exigindo avaliação prévia do modelo."
       }
     ]
   }
@@ -102,6 +91,13 @@ function pegarCategoriaDaURL() {
 
 function abrirCategoria(categoria) {
   window.location.href = `index.html?categoria=${categoria}`;
+}
+
+function criarLinkWhatsApp(nomeServico, categoria) {
+  const mensagem = `Olá! Tenho interesse no serviço: ${nomeServico} - ${categoria}. Gostaria de mais informações e de um orçamento.`;
+  const mensagemCodificada = encodeURIComponent(mensagem);
+
+  return `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
 }
 
 function renderizarHome() {
@@ -159,7 +155,7 @@ function renderizarPagamento() {
 
         <article class="card-servico pagamento-card">
           <h3>💳 Cartão de Débito / Crédito (Aproximação)</h3>
-          <p>Aceitamos as principais bandeiras no débito e crédito.</p>
+          <p>Aceitamos as principais bandeiras no débito e crédito. Consulte previamente as condições disponíveis para o serviço solicitado.</p>
         </article>
       </div>
     </section>
@@ -180,11 +176,25 @@ function renderizarCategoria(nomeCategoria) {
   }
 
   const cards = categoria.servicos.map(servico => {
+    const linkWhatsApp = criarLinkWhatsApp(
+      servico.nome,
+      categoria.titulo
+    );
+
     return `
       <article class="card-servico">
         <h3>${servico.nome}</h3>
         <p>${servico.descricao}</p>
-        <div class="preco">Preço: ${servico.preco}</div>
+
+        <div class="area-botao-servico">
+          <a 
+            href="${linkWhatsApp}" 
+            target="_blank" 
+            class="botao-solicitar"
+          >
+            Solicitar este serviço
+          </a>
+        </div>
       </article>
     `;
   }).join("");
