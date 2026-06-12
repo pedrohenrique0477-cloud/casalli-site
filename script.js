@@ -9,7 +9,7 @@ const categorias = {
     servicos: [
       {
         nome: "Limpeza Interna e Externa - PS4",
-        descricao: "Serviço completo com desmontagem cuidadosa do console, remoção de poeira interna, limpeza do cooler, dissipador e saídas de ventilação. Também inclui troca da pasta térmica para auxiliar no controle de temperatura e melhorar o desempenho térmico do aparelho."
+        descricao: "Serviço completo com desmontagem cuidadosa do console, remoção de poeira interna, limpeza do cooler, dissipador e saídas de ventilação. Também inclui troca da pasta térmica para auxiliar no controle de temperatura e auxiliar no desempenho."
       },
       {
         nome: "Limpeza Interna e Externa - PS5",
