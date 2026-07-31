@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fundo-principal: #071728;
+  --fundo-secundario: #0d2a45;
+  --card: #1b456b;
+  --borda: #3f7db8;
+  --azul: #4aa8ff;
+  --texto: #f5f7fa;
+  --texto-suave: #9fb3c8;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #061423 0%, #0b2946 100%);
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--texto);
+}
+
+/* TOPO */
+
+.topo {
+  width: 100%;
+  height: 160px;
+  padding: 45px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(74, 168, 255, 0.25);
+  background-color: #061423;
+}
+
+.topo-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo-pequena {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img-pequena {
+  width: 70px;
+  height: auto;
+  display: block;
+  transition: 0.3s ease;
+  mix-blend-mode: screen;
+}
+
+.logo-img-pequena:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 8px rgba(74, 168, 255, 0.5));
+}
+
+.botao-pagamento-topo {
+  background-color: rgba(34, 76, 116, 0.75);
+  color: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  padding: 9px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.botao-pagamento-topo:hover {
+  background-color: rgba(50, 103, 151, 0.95);
+  transform: translateY(-3px);
+  box-shadow: 0 0 16px rgba(74, 168, 255, 0.35);
+}
+
+.contatos-topo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+}
+
+.whatsapp,
+.instagram-link {
+  color: var(--azul);
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: 400;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 230px;
+}
+
+.whatsapp:hover,
+.instagram-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(74, 168, 255, 0.9);
+}
+
+.icone-contato {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.instagram-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.instagram-link:hover .instagram-img {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 8px rgba(74, 168, 255, 0.7));
+}
+
+/* PÁGINA INICIAL */
+
+.home {
+  min-height: calc(100vh - 160px);
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 35px 30px 60px;
+  text-align: center;
+}
+
+.chamada {
+  color: var(--azul);
+  font-size: 28px;
+}
+
+.chamada-topo {
+  margin-top: 0;
+}
+
+.logo-central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.logo-img-central {
+  width: 180px;
+  max-width: 90%;
+  height: auto;
+  display: block;
+  mix-blend-mode: screen;
+}
+
+.logo-textos h1 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 16px;
+  font-size: 52px;
+  font-weight: 500;
+  color: #eeeeee;
+}
+
+.logo-textos p {
+  margin-top: 12px;
+  letter-spacing: 22px;
+  font-size: 20px;
+  color: #d9d9d9;
+}
+
+.lista-topicos {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.topico {
+  width: 100%;
+  min-height: 100px;
+  border: 2px solid var(--borda);
+  border-radius: 9px;
+  background-color: rgba(34, 76, 116, 0.75);
+  color: #dce9f7;
+  font-size: 38px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.35s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.topico span {
+  font-size: 34px;
+}
+
+.topico:hover {
+  background-color: rgba(50, 103, 151, 0.95);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(74, 168, 255, 0.45);
+  color: white;
+}
+
+/* PÁGINAS INTERNAS */
+
+.pagina-servicos {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 36px 32px 80px;
+}
+
+.titulo-categoria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.titulo-categoria .icone {
+  font-size: 42px;
+}
+
+.titulo-categoria h2 {
+  font-size: 44px;
+  font-weight: 400;
+}
+
+.servicos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-servico {
+  background-color: rgba(34, 76, 116, 0.86);
+  border: 2px solid var(--borda);
+  border-radius: 21px;
+  padding: 25px 28px 31px;
+  min-height: 180px;
+  transition: 0.3s ease;
+}
+
+.card-servico:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 22px rgba(74, 168, 255, 0.4);
+  background-color: rgba(38, 86, 132, 0.95);
+}
+
+.card-servico h3 {
+  font-size: 27px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.card-servico p {
+  color: var(--texto-suave);
+  font-size: 18px;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.botao-voltar {
+  display: inline-block;
+  margin-bottom: 35px;
+  color: var(--azul);
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.botao-voltar:hover {
+  color: #ffffff;
+}
+
+/* BOTÃO SOLICITAR SERVIÇO */
+
+.area-botao-servico {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.botao-solicitar {
+  background-color: rgba(74, 168, 255, 0.18);
+  color: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.botao-solicitar:hover {
+  background-color: rgba(74, 168, 255, 0.38);
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(74, 168, 255, 0.45);
+}
+
+/* PAGAMENTO */
+
+.pagamento-card {
+  min-height: 110px;
+}
+
+.pagamento-card p {
+  margin-bottom: 0;
+}
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+  .topo {
+    height: 120px;
+    padding: 18px 16px;
+    align-items: flex-start;
+  }
+
+  .topo-esquerda {
+    gap: 12px;
+  }
+
+  .logo-img-pequena {
+    width: 48px;
+  }
+
+  .botao-pagamento-topo {
+    font-size: 11px;
+    padding: 7px 12px;
+  }
+
+  .contatos-topo {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .whatsapp,
+  .instagram-link {
+    font-size: 13px;
+    min-width: 135px;
+  }
+
+  .icone-contato {
+    width: 22px;
+    height: 22px;
+    font-size: 16px;
+  }
+
+  .instagram-img {
+    width: 21px;
+    height: 21px;
+  }
+
+  .home {
+    padding-top: 20px;
+  }
+
+  .chamada {
+    font-size: 18px;
+  }
+
+  .logo-central {
+    flex-direction: row;
+    gap: 18px;
+    margin-top: 80px;
+    margin-bottom: 70px;
+  }
+
+  .logo-img-central {
+    width: 80px;
+  }
+
+  .logo-textos h1 {
+    font-size: 30px;
+    letter-spacing: 10px;
+  }
+
+  .logo-textos p {
+    font-size: 13px;
+    letter-spacing: 12px;
+  }
+
+  .topico {
+    font-size: 23px;
+    min-height: 57px;
+  }
+
+  .topico span {
+    font-size: 24px;
+  }
+
+  .lista-topicos {
+    gap: 22px;
+  }
+
+  .titulo-categoria h2 {
+    font-size: 26px;
+  }
+
+  .titulo-categoria .icone {
+    font-size: 28px;
+  }
+
+  .card-servico {
+    min-height: 130px;
+    padding: 18px 20px 22px;
+  }
+
+  .card-servico h3 {
+    font-size: 18px;
+  }
+
+  .card-servico p {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+
+  .pagina-servicos {
+    padding: 25px 26px 60px;
+  }
+
+  .area-botao-servico {
+    justify-content: center;
+    margin-top: 22px;
+  }
+
+  .botao-solicitar {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 11px 14px;
+  }
+}
