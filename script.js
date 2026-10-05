@@ -96,37 +96,6 @@ const categorias = {
         descricao: "Procedimento de reset do contador de almofada de tinta em modelos compatíveis. Indicado quando a impressora apresenta aviso relacionado à almofada ou ao limite de absorção, exigindo avaliação prévia do modelo e das condições do equipamento."
       }
     ]
-  },
-
-  sites: {
-    titulo: "Sites",
-    icone: "🌐",
-    servicos: [
-      {
-        nome: "Site Profissional Simples",
-        descricao: "Criação de site simples e profissional para apresentação de serviços, perfil profissional, contato, redes sociais e informações principais do negócio. Indicado para quem precisa de uma presença online organizada, bonita e direta."
-      },
-      {
-        nome: "Site de Cursos",
-        descricao: "Criação de site para organização e apresentação de cursos, módulos, aulas, materiais, informações dos alunos e páginas de acesso. Pode ser adaptado conforme a necessidade do projeto e o tipo de conteúdo que será disponibilizado."
-      },
-      {
-        nome: "Site de Convite Digital",
-        descricao: "Criação de convite digital personalizado para eventos como casamento, chá de casa nova, aniversário, formatura ou outras comemorações. Pode incluir data, local, mensagem, lista de presentes, QR Code, links e informações importantes para os convidados."
-      },
-      {
-        nome: "Site de Controle Financeiro",
-        descricao: "Criação de site personalizado para controle financeiro, com organização de entradas, despesas, categorias, resumo mensal e acompanhamento dos valores. Pode ser adaptado para uso pessoal, familiar ou pequenos controles do dia a dia."
-      },
-      {
-        nome: "Site de Lista de Compras / Enxoval",
-        descricao: "Criação de site para organizar lista de compras, enxoval, presentes ou itens de casamento. Pode incluir categorias, status dos itens, valores, observações e uma visualização simples para acompanhar o que já foi comprado e o que ainda falta."
-      },
-      {
-        nome: "Site Personalizado Sob Pedido",
-        descricao: "Criação de site conforme a ideia do cliente. A pessoa descreve o que precisa, quais informações quer mostrar e qual objetivo do site, e o projeto é avaliado para montar uma solução simples, funcional e personalizada."
-      }
-    ]
   }
 };
 
@@ -192,11 +161,6 @@ function renderizarHome() {
         <button class="topico" onclick="abrirCategoria('impressora')">
           <span>🖨️</span>
           Impressora
-        </button>
-
-        <button class="topico" onclick="abrirCategoria('sites')">
-          <span>🌐</span>
-          Sites
         </button>
       </div>
     </section>
