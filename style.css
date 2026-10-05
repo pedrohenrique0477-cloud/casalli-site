@@ -445,3 +445,29 @@ body {
     padding: 11px 14px;
   }
 }
+
+.topico-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+}
+
+.titulo-img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .topico-img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .titulo-img {
+    width: 28px;
+    height: 28px;
+  }
+}

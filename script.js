@@ -56,6 +56,21 @@ const categorias = {
     ]
   },
 
+  "pacote-office": {
+    titulo: "Pacote Office",
+    iconeImg: "office.png",
+    servicos: [
+      {
+        nome: "Pacote Office Completo",
+        descricao: "O pacote inclui os principais programas do Office, como <strong>Word, Excel, PowerPoint, Outlook, Access, Publisher</strong> e demais aplicativos disponíveis na versão instalada. A ativação é <strong>permanente</strong>, sem necessidade de renovação mensal ou anual. Após a instalação, também ofereço <strong>suporte caso seja necessário algum ajuste, configuração ou auxílio relacionado ao Office</strong>. Ideal para quem quer ter o pacote completo instalado e pronto para trabalhar, estudar ou usar no dia a dia."
+      },
+      {
+        nome: "App Office Unitário",
+        descricao: "Você pode escolher <strong>somente os aplicativos do Office que deseja instalar</strong>. Por exemplo, se utiliza apenas <strong>Word, Excel e PowerPoint</strong>, não é necessário instalar os demais programas. A instalação é feita de forma personalizada, de acordo com a sua necessidade. Os aplicativos escolhidos são instalados, configurados e entregues com <strong>ativação permanente</strong>, sem necessidade de renovação mensal ou anual. Assim, você fica apenas com os programas que realmente utiliza, evitando aplicativos desnecessários no computador."
+      }
+    ]
+  },
+
   impressora: {
     titulo: "Impressora",
     icone: "🖨️",
@@ -124,6 +139,14 @@ function abrirCategoria(categoria) {
   window.location.href = `index.html?categoria=${categoria}`;
 }
 
+function criarIconeCategoria(categoria, classe) {
+  if (categoria.iconeImg) {
+    return `<img src="${categoria.iconeImg}" alt="${categoria.titulo}" class="${classe}">`;
+  }
+
+  return `<span>${categoria.icone}</span>`;
+}
+
 function criarLinkWhatsApp(nomeServico, categoria) {
   const mensagem = `Olá! Tenho interesse no serviço: ${nomeServico} - ${categoria}. Gostaria de mais informações e de um orçamento.`;
   const mensagemCodificada = encodeURIComponent(mensagem);
@@ -159,6 +182,11 @@ function renderizarHome() {
         <button class="topico" onclick="abrirCategoria('notebook')">
           <span>💻</span>
           Notebook
+        </button>
+
+        <button class="topico" onclick="abrirCategoria('pacote-office')">
+          <img src="office.png" alt="Pacote Office" class="topico-img">
+          Pacote Office
         </button>
 
         <button class="topico" onclick="abrirCategoria('impressora')">
@@ -240,7 +268,9 @@ function renderizarCategoria(nomeCategoria) {
       <a href="index.html" class="botao-voltar">← Voltar para o início</a>
 
       <div class="titulo-categoria">
-        <span class="icone">${categoria.icone}</span>
+        <span class="icone">
+          ${criarIconeCategoria(categoria, "titulo-img")}
+        </span>
         <h2>${categoria.titulo}</h2>
       </div>
 
